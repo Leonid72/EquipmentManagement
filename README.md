@@ -5,6 +5,8 @@ A full‑stack **Equipment Management System** consisting of:
 - **Angular 19 Frontend** (PrimeNG, RxJS)
 - **.NET 8 Web API Backend** (Clean Architecture, EF Core)
 
+https://youtu.be/QuzEIb71MvY
+
 This repository contains everything needed to run the system locally or in production.
 
 ---
