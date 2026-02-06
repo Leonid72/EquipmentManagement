@@ -1,0 +1,182 @@
+{
+  "info": {
+    "name": "Equipment Management API",
+    "description": "Complete API collection for Equipment Management System",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Equipment",
+      "item": [
+        {
+          "name": "Get All Equipment (Paginated)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/equipment?pageNumber=1&pageSize=10",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "equipment"],
+              "query": [
+                {
+                  "key": "pageNumber",
+                  "value": "1"
+                },
+                {
+                  "key": "pageSize",
+                  "value": "10"
+                },
+                {
+                  "key": "searchTerm",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "categoryId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "status",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "sortBy",
+                  "value": "EquipmentName",
+                  "disabled": true
+                },
+                {
+                  "key": "sortDirection",
+                  "value": "ASC",
+                  "disabled": true
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Equipment By ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/equipment/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "equipment", "1"]
+            }
+          }
+        },
+        {
+          "name": "Search Equipment",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/equipment/search?searchTerm=Dell&categoryId=1&status=Active",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "equipment", "search"],
+              "query": [
+                {
+                  "key": "searchTerm",
+                  "value": "Dell"
+                },
+                {
+                  "key": "categoryId",
+                  "value": "1"
+                },
+                {
+                  "key": "purchaseDateFrom",
+                  "value": "2023-01-01",
+                  "disabled": true
+                },
+                {
+                  "key": "purchaseDateTo",
+                  "value": "2024-12-31",
+                  "disabled": true
+                },
+                {
+                  "key": "status",
+                  "value": "Active"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Equipment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"equipmentName\": \"Dell Latitude 7420\",\n  \"serialNumber\": \"DL-2024-NEW-001\",\n  \"categoryID\": 1,\n  \"locationID\": 1,\n  \"purchaseDate\": \"2024-02-01\",\n  \"status\": \"Active\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/equipment",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "equipment"]
+            }
+          }
+        },
+        {
+          "name": "Update Equipment",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"equipmentID\": 1,\n  \"equipmentName\": \"Dell Latitude 5520 - Updated\",\n  \"serialNumber\": \"DL-2023-001\",\n  \"categoryID\": 1,\n  \"locationID\": 1,\n  \"purchaseDate\": \"2023-01-15\",\n  \"status\": \"Active\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/api/equipment/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "equipment", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Equipment",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/equipment/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "equipment", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Equipment By Category",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/equipment/category/1",
+              "host": ["{{baseUrl}}"],
+              "path": ["api", "equipment", "category", "1"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://localhost:5001",
+      "type": "string"
+    }
+  ]
+}

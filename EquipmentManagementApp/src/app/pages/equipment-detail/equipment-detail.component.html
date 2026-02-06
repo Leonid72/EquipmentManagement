@@ -1,0 +1,185 @@
+<div class="equipment-detail-container">
+  <div class="header">
+    <button pButton type="button" icon="pi pi-arrow-left" 
+            class="p-button-text" 
+            (click)="goBack()"
+            label="Back to List"></button>
+    <h1>Equipment Details</h1>
+  </div>
+
+  <p-card *ngIf="equipment && !editMode" class="equipment-card">
+    <ng-template pTemplate="header">
+      <div class="card-header">
+        <h2>{{ equipment.equipmentName }}</h2>
+        <div class="action-buttons">
+          <button pButton type="button" label="Edit" icon="pi pi-pencil" 
+                  (click)="toggleEditMode()" 
+                  class="p-button-primary"></button>
+          <button pButton type="button" label="Delete" icon="pi pi-trash" 
+                  (click)="deleteEquipment()" 
+                  class="p-button-danger"></button>
+        </div>
+      </div>
+    </ng-template>
+
+    <div class="equipment-details">
+      <div class="detail-row">
+        <label>Equipment Name:</label>
+        <span>{{ equipment.equipmentName }}</span>
+      </div>
+
+      <div class="detail-row">
+        <label>Serial Number:</label>
+        <span>{{ equipment.serialNumber }}</span>
+      </div>
+
+      <div class="detail-row">
+        <label>Category:</label>
+        <span>{{ equipment.categoryName }}</span>
+      </div>
+
+      <div class="detail-row">
+        <label>Location:</label>
+        <span>{{ equipment.locationName }}</span>
+      </div>
+
+      <div class="detail-row">
+        <label>Building:</label>
+        <span>{{ equipment.building }}</span>
+      </div>
+
+      <div class="detail-row">
+        <label>Floor:</label>
+        <span>{{ equipment.floor }}</span>
+      </div>
+
+      <div class="detail-row">
+        <label>Purchase Date:</label>
+        <span>{{ equipment.purchaseDate | date: 'yyyy-MM-dd' }}</span>
+      </div>
+
+      <div class="detail-row">
+        <label>Status:</label>
+        <span class="status-badge" [ngClass]="'status-' + equipment.status.toLowerCase()">
+          {{ equipment.status }}
+        </span>
+      </div>
+    </div>
+  </p-card>
+
+  <p-card *ngIf="editMode" class="equipment-card">
+    <ng-template pTemplate="header">
+      <div class="card-header">
+        <h2>Edit Equipment</h2>
+      </div>
+    </ng-template>
+
+    <form [formGroup]="equipmentForm" (ngSubmit)="onSubmit()">
+      <div class="p-fluid">
+        <div class="field">
+          <label for="equipmentName">Equipment Name *</label>
+          <input pInputText id="equipmentName" 
+                 formControlName="equipmentName"
+                 [class.ng-invalid]="isFieldInvalid('equipmentName')"
+                 [class.ng-dirty]="isFieldInvalid('equipmentName')">
+          <small class="p-error" *ngIf="isFieldInvalid('equipmentName')">
+            {{ getFieldError('equipmentName') }}
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="serialNumber">Serial Number *</label>
+          <input pInputText id="serialNumber" 
+                 formControlName="serialNumber"
+                 [class.ng-invalid]="isFieldInvalid('serialNumber')"
+                 [class.ng-dirty]="isFieldInvalid('serialNumber')">
+          <small class="p-error" *ngIf="isFieldInvalid('serialNumber')">
+            {{ getFieldError('serialNumber') }}
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="category">Category *</label>
+          <p-dropdown id="category" 
+                      formControlName="categoryID"
+                      [options]="categories" 
+                      optionLabel="categoryName" 
+                      optionValue="categoryID"
+                      placeholder="Select a Category"
+                      [class.ng-invalid]="isFieldInvalid('categoryID')"
+                      [class.ng-dirty]="isFieldInvalid('categoryID')">
+          </p-dropdown>
+          <small class="p-error" *ngIf="isFieldInvalid('categoryID')">
+            Category is required
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="location">Location *</label>
+          <p-dropdown id="location" 
+                      formControlName="locationID"
+                      [options]="locations" 
+                      optionLabel="locationName" 
+                      optionValue="locationID"
+                      placeholder="Select a Location"
+                      [class.ng-invalid]="isFieldInvalid('locationID')"
+                      [class.ng-dirty]="isFieldInvalid('locationID')">
+            <ng-template let-location pTemplate="item">
+              {{ location.locationName }} - {{ location.building }}, Floor {{ location.floor }}
+            </ng-template>
+          </p-dropdown>
+          <small class="p-error" *ngIf="isFieldInvalid('locationID')">
+            Location is required
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="purchaseDate">Purchase Date *</label>
+          <p-calendar id="purchaseDate" 
+                      formControlName="purchaseDate"
+                      [showIcon]="true"
+                      dateFormat="yy-mm-dd"
+                      [maxDate]="maxDate"
+                      placeholder="Select Purchase Date"
+                      [class.ng-invalid]="isFieldInvalid('purchaseDate')"
+                      [class.ng-dirty]="isFieldInvalid('purchaseDate')">
+          </p-calendar>
+          <small class="p-error" *ngIf="isFieldInvalid('purchaseDate')">
+            Purchase date is required and cannot be in the future
+          </small>
+        </div>
+
+        <div class="field">
+          <label for="status">Status *</label>
+          <p-dropdown id="status" 
+                      formControlName="status"
+                      [options]="statuses" 
+                      placeholder="Select Status"
+                      [class.ng-invalid]="isFieldInvalid('status')"
+                      [class.ng-dirty]="isFieldInvalid('status')">
+          </p-dropdown>
+          <small class="p-error" *ngIf="isFieldInvalid('status')">
+            Status is required
+          </small>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button pButton type="button" label="Cancel" 
+                (click)="toggleEditMode()" 
+                class="p-button-secondary"></button>
+        <button pButton type="submit" label="Save Changes" 
+                icon="pi pi-check"
+                [loading]="loading"
+                class="p-button-success"></button>
+      </div>
+    </form>
+  </p-card>
+
+  <div *ngIf="loading && !equipment" class="loading-container">
+    <i class="pi pi-spin pi-spinner" style="font-size: 3rem"></i>
+    <p>Loading equipment details...</p>
+  </div>
+</div>
+
+<p-confirmDialog></p-confirmDialog>

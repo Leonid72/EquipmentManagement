@@ -1,0 +1,191 @@
+.add-equipment-container {
+  padding: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+
+    h1 {
+      margin: 0;
+      color: #333;
+      font-size: 2rem;
+    }
+  }
+
+  .equipment-form-card {
+    margin-bottom: 1.5rem;
+
+    ::ng-deep .p-card-header {
+      padding: 0;
+    }
+
+    ::ng-deep .p-card-body {
+      padding: 0;
+    }
+
+    ::ng-deep .p-card-content {
+      padding: 2rem;
+    }
+
+    .card-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1.5rem;
+
+      h2 {
+        margin: 0;
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  form {
+    .field {
+      margin-bottom: 0.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: 600;
+        color: #495057;
+      }
+
+      .p-error {
+        display: block;
+        margin-top: 0.25rem;
+        color: #dc3545;
+        font-size: 0.875rem;
+      }
+
+      .help-text {
+        display: block;
+        margin-top: 0.25rem;
+        color: #6c757d;
+        font-size: 0.875rem;
+      }
+    }
+
+    .dropdown-item {
+      padding: 0.25rem 0;
+
+      .text-muted {
+        color: #6c757d;
+        font-size: 0.875rem;
+      }
+    }
+
+    .status-preview {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      border-radius: 12px;
+      font-size: 0.875rem;
+      font-weight: 600;
+
+      &.status-active {
+        background-color: #d4edda;
+        color: #155724;
+      }
+
+      &.status-inmaintenance {
+        background-color: #fff3cd;
+        color: #856404;
+      }
+
+      &.status-outofservice {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+
+      &.status-retired {
+        background-color: #d6d8db;
+        color: #383d41;
+      }
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 1rem;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e9ecef;
+    }
+  }
+
+  .info-panel {
+    ::ng-deep .p-card {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+    }
+
+    .info-header {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 1.5rem;
+      background-color: #e7f3ff;
+      border-bottom: 1px solid #b3d9ff;
+
+      i {
+        color: #0066cc;
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        margin: 0;
+        color: #0066cc;
+        font-size: 1.1rem;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.5rem;
+      color: #495057;
+
+      li {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .add-equipment-container {
+    padding: 1rem;
+
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .equipment-form-card {
+      ::ng-deep .p-card-content {
+        padding: 1rem;
+      }
+    }
+
+    form {
+      .grid {
+        margin: 0;
+
+        .field {
+          padding: 0.5rem 0;
+        }
+      }
+
+      .form-actions {
+        flex-direction: column;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

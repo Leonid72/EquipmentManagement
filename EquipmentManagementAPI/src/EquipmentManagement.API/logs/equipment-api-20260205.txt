@@ -1,0 +1,747 @@
+2026-02-05 16:19:09.195 +02:00 [INF] Starting Equipment Management API
+2026-02-05 16:19:09.950 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 16:19:09.956 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 16:19:10.177 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 16:19:10.227 +02:00 [INF] Hosting environment: Development
+2026-02-05 16:19:10.245 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 16:19:49.044 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-05 16:19:49.051 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-05 16:20:17.371 +02:00 [ERR] An error occurred using the connection to database 'EquipmentManagementDB' on server 'localhost'.
+2026-02-05 16:20:17.436 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EquipmentManagement.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): The system cannot find the file specified.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): The system cannot find the file specified.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-02-05 16:20:17.896 +02:00 [ERR] Error occurred while fetching equipment
+Microsoft.Data.SqlClient.SqlException (0x80131904): A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Named Pipes Provider, error: 40 - Could not open a connection to SQL Server)
+ ---> System.ComponentModel.Win32Exception (2): The system cannot find the file specified.
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnectionString connectionOptions, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean ignoreSniOpenTimeout, TimeoutTimer timeout, Boolean withFailover)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(ServerInfo serverInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString connectionOptions, SqlCredential credential, TimeoutTimer timeout)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(TimeoutTimer timeout, SqlConnectionString connectionOptions, SqlCredential credential, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance)
+   at Microsoft.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, SqlCredential credential, Object providerInfo, String newPassword, SecureString newSecurePassword, Boolean redirectedUserInstance, SqlConnectionString userConnectionOptions, SessionData reconnectSessionData, Boolean applyTransientFaultHandling, String accessToken, DbConnectionPool pool)
+   at Microsoft.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, DbConnectionPoolKey poolKey, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnectionPool pool, DbConnection owningObject, DbConnectionOptions options, DbConnectionPoolKey poolKey, DbConnectionOptions userOptions)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject, DbConnectionOptions userOptions, DbConnectionInternal oldConnection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   at Microsoft.Data.ProviderBase.DbConnectionPool.WaitForPendingOpen()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternalAsync(Boolean errorsExpected, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenAsync(CancellationToken cancellationToken, Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.EquipmentRepository.GetPagedAsync(Int32 pageNumber, Int32 pageSize, String searchTerm, Nullable`1 categoryId, Nullable`1 status, String sortBy, String sortDirection) in D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\EquipmentRepository.cs:line 63
+   at EquipmentManagement.Application.Services.EquipmentService.GetAllEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 34
+ClientConnectionId:00000000-0000-0000-0000-000000000000
+Error Number:2,State:0,Class:20
+2026-02-05 18:16:21.087 +02:00 [INF] Database initialized successfully
+2026-02-05 18:16:21.210 +02:00 [INF] Starting Equipment Management API
+2026-02-05 18:16:21.891 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 18:16:21.929 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 18:16:23.181 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 18:16:23.264 +02:00 [INF] Hosting environment: Development
+2026-02-05 18:16:23.267 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 18:18:20.624 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-05 18:18:20.639 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-05 18:18:21.631 +02:00 [ERR] Failed executing DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*)
+FROM [Equipment] AS [e]
+2026-02-05 18:18:21.680 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EquipmentManagement.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Equipment'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b0ffc7b6-3cc0-42e6-8a4a-fb1f05e14624
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Equipment'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b0ffc7b6-3cc0-42e6-8a4a-fb1f05e14624
+Error Number:208,State:1,Class:16
+2026-02-05 18:18:22.004 +02:00 [ERR] Error occurred while fetching equipment
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Equipment'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.EquipmentRepository.GetPagedAsync(Int32 pageNumber, Int32 pageSize, String searchTerm, Nullable`1 categoryId, Nullable`1 status, String sortBy, String sortDirection) in D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\EquipmentRepository.cs:line 63
+   at EquipmentManagement.Application.Services.EquipmentService.GetAllEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 34
+ClientConnectionId:b0ffc7b6-3cc0-42e6-8a4a-fb1f05e14624
+Error Number:208,State:1,Class:16
+2026-02-05 18:19:09.553 +02:00 [INF] GET api/equipment/1 - Fetching equipment by ID
+2026-02-05 18:19:09.565 +02:00 [INF] Fetching equipment with ID: 1
+2026-02-05 18:19:10.310 +02:00 [ERR] Failed executing DbCommand (312ms) [Parameters=[@__id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[EquipmentID], [e].[CategoryID], [e].[CreatedDate], [e].[EquipmentName], [e].[LocationID], [e].[ModifiedDate], [e].[PurchaseDate], [e].[SerialNumber], [e].[Status], [c].[CategoryID], [c].[CategoryName], [c].[CreatedDate], [c].[Description], [c].[ModifiedDate], [l].[LocationID], [l].[Building], [l].[CreatedDate], [l].[Floor], [l].[LocationName], [l].[ModifiedDate]
+FROM [Equipment] AS [e]
+INNER JOIN [Categories] AS [c] ON [e].[CategoryID] = [c].[CategoryID]
+INNER JOIN [Locations] AS [l] ON [e].[LocationID] = [l].[LocationID]
+WHERE [e].[EquipmentID] = @__id_0
+2026-02-05 18:19:10.322 +02:00 [ERR] An exception occurred while iterating over the results of a query for context type 'EquipmentManagement.Infrastructure.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Equipment'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b0ffc7b6-3cc0-42e6-8a4a-fb1f05e14624
+Error Number:208,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Equipment'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:b0ffc7b6-3cc0-42e6-8a4a-fb1f05e14624
+Error Number:208,State:1,Class:16
+2026-02-05 18:19:10.547 +02:00 [ERR] Error occurred while fetching equipment with ID: 1
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'Equipment'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__209_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.<>c__DisplayClass30_0`2.<<ExecuteAsync>b__0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteImplementationAsync[TState,TResult](Func`4 operation, Func`4 verifySucceeded, TState state, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.ExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.EquipmentRepository.GetByIdAsync(Int32 id) in D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\EquipmentRepository.cs:line 16
+   at EquipmentManagement.Application.Services.EquipmentService.GetEquipmentByIdAsync(Int32 id) in D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 75
+ClientConnectionId:b0ffc7b6-3cc0-42e6-8a4a-fb1f05e14624
+Error Number:208,State:1,Class:16
+2026-02-05 18:24:39.821 +02:00 [INF] Database initialized successfully
+2026-02-05 18:24:40.088 +02:00 [INF] Starting Equipment Management API
+2026-02-05 18:24:40.542 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 18:24:40.546 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 18:24:41.152 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 18:24:41.165 +02:00 [INF] Hosting environment: Development
+2026-02-05 18:24:41.167 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 18:27:25.876 +02:00 [INF] Database initialized successfully
+2026-02-05 18:27:25.989 +02:00 [INF] Starting Equipment Management API
+2026-02-05 18:27:26.588 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 18:27:26.593 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 18:27:26.741 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 18:27:26.751 +02:00 [INF] Hosting environment: Development
+2026-02-05 18:27:26.752 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 18:33:12.639 +02:00 [INF] Database initialized successfully
+2026-02-05 18:33:12.718 +02:00 [INF] Starting Equipment Management API
+2026-02-05 18:33:13.252 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 18:33:13.326 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 18:33:13.523 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 18:33:13.528 +02:00 [INF] Hosting environment: Development
+2026-02-05 18:33:13.566 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 18:34:02.919 +02:00 [INF] Database initialized successfully
+2026-02-05 18:34:02.984 +02:00 [INF] Starting Equipment Management API
+2026-02-05 18:34:03.279 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 18:34:03.284 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 18:34:03.454 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 18:34:03.468 +02:00 [INF] Hosting environment: Development
+2026-02-05 18:34:03.469 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 18:37:58.300 +02:00 [INF] Database initialized successfully
+2026-02-05 18:37:58.363 +02:00 [INF] Starting Equipment Management API
+2026-02-05 18:37:58.633 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 18:37:58.637 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 18:37:58.838 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 18:37:58.912 +02:00 [INF] Hosting environment: Development
+2026-02-05 18:37:58.919 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 19:04:42.400 +02:00 [INF] Database initialized successfully
+2026-02-05 19:04:42.518 +02:00 [INF] Starting Equipment Management API
+2026-02-05 19:04:42.946 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 19:04:42.950 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 19:04:43.144 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 19:04:43.155 +02:00 [INF] Hosting environment: Development
+2026-02-05 19:04:43.158 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 19:11:30.865 +02:00 [INF] Database initialized successfully
+2026-02-05 19:11:30.966 +02:00 [INF] Starting Equipment Management API
+2026-02-05 19:11:31.509 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 19:11:31.519 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 19:11:31.694 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 19:11:31.702 +02:00 [INF] Hosting environment: Development
+2026-02-05 19:11:31.706 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 19:11:41.522 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-05 19:11:41.529 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-05 19:11:43.609 +02:00 [INF] Successfully fetched 2 equipment items out of 2
+2026-02-05 19:25:41.569 +02:00 [INF] Database initialized successfully
+2026-02-05 19:25:41.711 +02:00 [INF] Starting Equipment Management API
+2026-02-05 19:25:42.220 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 19:25:42.224 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 19:25:42.374 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 19:25:42.377 +02:00 [INF] Hosting environment: Development
+2026-02-05 19:25:42.380 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 19:25:55.717 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-05 19:25:55.734 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-05 19:25:58.239 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-05 19:28:47.688 +02:00 [INF] Database initialized successfully
+2026-02-05 19:28:47.788 +02:00 [INF] Starting Equipment Management API
+2026-02-05 19:28:48.165 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 19:28:48.168 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 19:28:48.245 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 19:28:48.247 +02:00 [INF] Hosting environment: Development
+2026-02-05 19:28:48.248 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 19:29:24.403 +02:00 [INF] POST api/equipment - Creating new equipment
+2026-02-05 19:29:24.410 +02:00 [INF] Creating new equipment: string
+2026-02-05 19:29:25.466 +02:00 [WRN] Category with ID 2147483647 not found
+2026-02-05 19:32:17.548 +02:00 [INF] Database initialized successfully
+2026-02-05 19:32:17.722 +02:00 [INF] Starting Equipment Management API
+2026-02-05 19:32:18.420 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 19:32:18.466 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 19:32:19.791 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 19:32:19.812 +02:00 [INF] Hosting environment: Development
+2026-02-05 19:32:19.814 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 19:32:29.286 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-05 19:32:29.293 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-05 19:32:30.784 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-05 19:36:16.465 +02:00 [INF] Database initialized successfully
+2026-02-05 19:36:16.594 +02:00 [INF] Starting Equipment Management API
+2026-02-05 19:36:17.435 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 19:36:17.448 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 19:36:17.646 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 19:36:17.678 +02:00 [INF] Hosting environment: Development
+2026-02-05 19:36:17.727 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 19:51:43.036 +02:00 [INF] Database initialized successfully
+2026-02-05 19:51:43.135 +02:00 [INF] Starting Equipment Management API
+2026-02-05 19:51:44.272 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 19:51:44.277 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 19:51:44.576 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 19:51:44.765 +02:00 [INF] Hosting environment: Development
+2026-02-05 19:51:44.767 +02:00 [INF] Content root path: D:\Projects\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 20:11:40.169 +02:00 [INF] Database initialized successfully
+2026-02-05 20:11:40.252 +02:00 [INF] Starting Equipment Management API
+2026-02-05 20:11:40.755 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 20:11:40.760 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 20:11:40.925 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 20:11:40.928 +02:00 [INF] Hosting environment: Development
+2026-02-05 20:11:40.939 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 20:11:53.216 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-05 20:11:53.223 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-05 20:11:55.291 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-05 21:14:21.655 +02:00 [INF] Database initialized successfully
+2026-02-05 21:14:21.801 +02:00 [INF] Starting Equipment Management API
+2026-02-05 21:14:22.717 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 21:14:22.733 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 21:14:26.643 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 21:14:27.590 +02:00 [INF] Hosting environment: Development
+2026-02-05 21:14:28.028 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 21:15:06.346 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 21:15:06.380 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 21:15:09.605 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 21:15:13.349 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 21:15:13.351 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 21:15:13.583 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 21:17:14.507 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 21:17:16.392 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 21:17:17.308 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 21:20:07.420 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 21:20:07.993 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 21:20:10.533 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 21:27:18.033 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 21:27:18.102 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 21:27:18.182 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 21:41:02.093 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 21:41:02.101 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 21:41:02.260 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:33:24.855 +02:00 [INF] Database initialized successfully
+2026-02-05 22:33:24.959 +02:00 [INF] Starting Equipment Management API
+2026-02-05 22:33:25.565 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 22:33:25.568 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 22:33:27.722 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 22:33:27.744 +02:00 [INF] Hosting environment: Development
+2026-02-05 22:33:27.869 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 22:33:37.333 +02:00 [ERR] An unhandled exception occurred: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ICategoryService' while attempting to activate 'EquipmentManagement.API.Controllers.CategoryController'.
+System.InvalidOperationException: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ICategoryService' while attempting to activate 'EquipmentManagement.API.Controllers.CategoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EquipmentManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 22
+2026-02-05 22:33:57.917 +02:00 [ERR] An unhandled exception occurred: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ICategoryService' while attempting to activate 'EquipmentManagement.API.Controllers.CategoryController'.
+System.InvalidOperationException: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ICategoryService' while attempting to activate 'EquipmentManagement.API.Controllers.CategoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EquipmentManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 22
+2026-02-05 22:33:59.860 +02:00 [ERR] An unhandled exception occurred: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ICategoryService' while attempting to activate 'EquipmentManagement.API.Controllers.CategoryController'.
+System.InvalidOperationException: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ICategoryService' while attempting to activate 'EquipmentManagement.API.Controllers.CategoryController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EquipmentManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 22
+2026-02-05 22:38:45.459 +02:00 [INF] Database initialized successfully
+2026-02-05 22:38:45.591 +02:00 [INF] Starting Equipment Management API
+2026-02-05 22:38:46.312 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-05 22:38:46.321 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-05 22:38:46.566 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-05 22:38:47.183 +02:00 [INF] Hosting environment: Development
+2026-02-05 22:38:47.186 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-05 22:39:39.818 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:39:39.829 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:39:40.268 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:39:47.276 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:39:47.287 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:39:47.566 +02:00 [INF] Found 2 equipment items matching search criteria
+2026-02-05 22:41:23.836 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-05 22:41:23.839 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-05 22:41:24.192 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-05 22:43:18.993 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:43:19.291 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:43:19.647 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:43:28.431 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:43:28.488 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:43:28.503 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:43:38.152 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:43:38.155 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:43:38.177 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:43:46.159 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:43:46.190 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:43:46.208 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:44:06.651 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:44:06.749 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:44:06.851 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:46:37.276 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:46:37.281 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:46:37.290 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:46:43.651 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:46:44.587 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:46:44.615 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:47:24.805 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:47:24.816 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:47:24.967 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:47:26.316 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:47:26.318 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:47:26.334 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:47:58.832 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:47:59.048 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:47:59.087 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:49:04.182 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:49:04.184 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:49:04.196 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:49:16.882 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:49:17.901 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:49:17.933 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:49:24.448 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:49:25.480 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:49:25.505 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:49:28.412 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:49:28.521 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:49:28.566 +02:00 [INF] Found 1 equipment items matching search criteria
+2026-02-05 22:49:30.021 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:49:30.036 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:49:30.092 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:50:08.038 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:50:08.155 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:50:08.247 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:52:02.494 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:52:02.564 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:52:02.612 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:52:59.863 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:52:59.898 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:53:00.167 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:53:19.281 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:53:19.283 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:53:19.302 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:53:37.598 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:53:37.601 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:53:37.626 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:53:44.095 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:53:44.097 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:53:44.683 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:55:33.536 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:55:33.637 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:55:33.661 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:55:53.999 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:55:54.002 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:55:54.026 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:57:42.144 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:57:42.147 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:57:42.332 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:58:35.023 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:58:35.026 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:58:35.036 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 22:58:45.025 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 22:58:45.062 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 22:58:45.083 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:01:59.660 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:01:59.662 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:01:59.675 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:02:11.499 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:02:11.500 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:02:11.536 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:05:15.107 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:05:15.115 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:05:15.566 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:06:11.473 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:06:11.497 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:06:11.508 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:07:32.041 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:07:32.043 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:07:32.057 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:08:45.473 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:08:45.514 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:08:45.526 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:08:50.730 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:08:50.874 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:08:50.890 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:08:55.576 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:08:55.579 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:08:55.605 +02:00 [INF] Found 2 equipment items matching search criteria
+2026-02-05 23:08:57.391 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:08:57.394 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:08:57.405 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:08:58.756 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:08:58.758 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:08:58.777 +02:00 [INF] Found 1 equipment items matching search criteria
+2026-02-05 23:09:01.094 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:01.095 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:01.114 +02:00 [INF] Found 2 equipment items matching search criteria
+2026-02-05 23:09:02.646 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:02.648 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:02.663 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:11.839 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:11.842 +02:00 [INF] Searching equipment with criteria: i
+2026-02-05 23:09:11.960 +02:00 [INF] Found 8 equipment items matching search criteria
+2026-02-05 23:09:13.856 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:13.857 +02:00 [INF] Searching equipment with criteria: ip
+2026-02-05 23:09:13.873 +02:00 [INF] Found 2 equipment items matching search criteria
+2026-02-05 23:09:17.567 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:17.576 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:17.590 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:18.710 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:18.712 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:18.722 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:19.302 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:19.304 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:19.313 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:20.245 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:20.247 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:20.261 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:21.100 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:21.102 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:21.125 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:21.819 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:21.821 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:21.842 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:22.525 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:22.527 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:22.533 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:23.823 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:23.826 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:23.839 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:25.054 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:25.057 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:25.068 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:25.819 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:25.822 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:25.828 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:26.330 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:26.333 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:26.344 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:29.359 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:29.424 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:29.459 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:09:33.739 +02:00 [INF] GET api/equipment/2 - Fetching equipment by ID
+2026-02-05 23:09:33.744 +02:00 [INF] Fetching equipment with ID: 2
+2026-02-05 23:09:33.859 +02:00 [INF] Successfully fetched equipment with ID: 2
+2026-02-05 23:09:54.091 +02:00 [INF] GET api/equipment/2 - Fetching equipment by ID
+2026-02-05 23:09:54.117 +02:00 [INF] Fetching equipment with ID: 2
+2026-02-05 23:09:54.131 +02:00 [INF] Successfully fetched equipment with ID: 2
+2026-02-05 23:09:58.303 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:09:58.373 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:09:58.458 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:10:00.590 +02:00 [INF] GET api/equipment/2 - Fetching equipment by ID
+2026-02-05 23:10:00.592 +02:00 [INF] Fetching equipment with ID: 2
+2026-02-05 23:10:00.603 +02:00 [INF] Successfully fetched equipment with ID: 2
+2026-02-05 23:10:02.726 +02:00 [INF] GET api/equipment/2 - Fetching equipment by ID
+2026-02-05 23:10:02.734 +02:00 [INF] Fetching equipment with ID: 2
+2026-02-05 23:10:02.769 +02:00 [INF] Successfully fetched equipment with ID: 2
+2026-02-05 23:10:43.440 +02:00 [INF] GET api/equipment/2 - Fetching equipment by ID
+2026-02-05 23:10:43.470 +02:00 [INF] Fetching equipment with ID: 2
+2026-02-05 23:10:43.484 +02:00 [INF] Successfully fetched equipment with ID: 2
+2026-02-05 23:10:45.585 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:10:45.589 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:10:45.622 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:10:50.855 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:10:50.858 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:10:50.872 +02:00 [INF] Found 10 equipment items matching search criteria
+2026-02-05 23:10:57.610 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:10:57.613 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:10:57.956 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && True && True && True && False || e.Status.ToString() == __searchDto_Status_0)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108
+2026-02-05 23:11:00.037 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:11:00.040 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:11:00.164 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && True && True && True && False || e.Status.ToString() == __searchDto_Status_0)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108
+2026-02-05 23:11:02.704 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:11:02.721 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:11:02.843 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && True && True && True && False || e.Status.ToString() == __searchDto_Status_0)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108
+2026-02-05 23:11:08.643 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:11:08.649 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:11:08.769 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && False || e.CategoryID == __searchDto_CategoryID_Value_0 && True && True && False || e.Status.ToString() == __searchDto_Status_1)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108
+2026-02-05 23:11:11.522 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:11:11.524 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:11:11.647 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && False || e.CategoryID == __searchDto_CategoryID_Value_0 && True && True && False || e.Status.ToString() == __searchDto_Status_1)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108
+2026-02-05 23:11:15.108 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:11:15.110 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:11:15.239 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && False || e.CategoryID == __searchDto_CategoryID_Value_0 && True && True && False || e.Status.ToString() == __searchDto_Status_1)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108
+2026-02-05 23:11:35.794 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-05 23:11:35.796 +02:00 [INF] Searching equipment with criteria: null
+2026-02-05 23:11:36.020 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && False || e.CategoryID == __searchDto_CategoryID_Value_0 && True && True && False || e.Status.ToString() == __searchDto_Status_1)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108

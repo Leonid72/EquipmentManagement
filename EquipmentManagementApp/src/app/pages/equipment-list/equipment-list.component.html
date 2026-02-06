@@ -1,0 +1,140 @@
+<div class="equipment-list-container">
+  <div class="header">
+    <h1>Equipment Management</h1>
+    <button pButton type="button" label="Add New Equipment" icon="pi pi-plus" 
+            (click)="addNew()" class="p-button-success"></button>
+  </div>
+
+  <div class="filters-panel">
+    <div class="filters-grid">
+      <div class="field">
+        <label for="searchTerm">Search</label>
+        <input pInputText id="searchTerm" type="text" 
+               [(ngModel)]="filters.searchTerm" 
+               placeholder="Search by name"
+               (keyup.enter)="onSearch()">
+      </div>
+
+      <div class="field">
+        <label for="category">Category</label>
+        <p-dropdown id="category" 
+                    [options]="categories" 
+                    [(ngModel)]="filters.categoryID"
+                    optionLabel="categoryName" 
+                    optionValue="categoryID"
+                    placeholder="All Categories"
+                    [showClear]="true">
+        </p-dropdown>
+      </div>
+
+      <div class="field">
+        <label for="status">Status</label>
+        <p-dropdown id="status" 
+                    [options]="statuses" 
+                    [(ngModel)]="filters.status"
+                    placeholder="All Statuses"
+                    [showClear]="true">
+        </p-dropdown>
+      </div>
+
+      <div class="field">
+        <label for="dateFrom">Purchase Date From</label>
+        <p-calendar id="dateFrom" 
+                    [(ngModel)]="filters.purchaseDateFrom"
+                    [showIcon]="true"
+                    dateFormat="yy-mm-dd"
+                    placeholder="From Date">
+        </p-calendar>
+      </div>
+
+      <div class="field">
+        <label for="dateTo">Purchase Date To</label>
+        <p-calendar id="dateTo" 
+                    [(ngModel)]="filters.purchaseDateTo"
+                    [showIcon]="true"
+                    dateFormat="yy-mm-dd"
+                    placeholder="To Date">
+        </p-calendar>
+      </div>
+
+      <div class="field filter-buttons">
+        <label>&nbsp;</label>
+        <button pButton type="button" icon="pi pi-search" 
+                (click)="onSearch()" 
+                class="p-button-primary"
+                label="Search"></button>
+      </div>
+    </div>
+
+    <div class="clear-filters">
+      <button pButton type="button" label="Clear Filters" 
+              icon="pi pi-filter-slash" 
+              (click)="onClearFilters()" 
+              class="p-button-outlined p-button-secondary"></button>
+    </div>
+  </div>
+
+  <div class="table-container">
+    <p-table [value]="equipment" 
+             [lazy]="true"
+             [paginator]="true"
+             [rows]="searchParams.pageSize"
+             [totalRecords]="totalRecords"
+             [loading]="loading"
+             (onLazyLoad)="onPageChange($event)"
+             [rowsPerPageOptions]="[5,10, 25, 50]"
+             [showCurrentPageReport]="true"
+             currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries"
+             styleClass="p-datatable-gridlines">
+      
+      <ng-template pTemplate="header">
+        <tr>
+          <th>Equipment Name</th>
+          <th>Serial Number</th>
+          <th>Category</th>
+          <th>Location</th>
+          <th>Status</th>
+          <th style="width: 180px">Actions</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-item>
+        <tr>
+          <td>{{ item.equipmentName }}</td>
+          <td>{{ item.serialNumber }}</td>
+          <td>{{ item.categoryName }}</td>
+          <td>{{ item.locationName }}</td>
+          <td>
+            <span [class]="'status-badge ' + getStatusClass(item.status)">
+              {{ formatStatus(item.status) }}
+            </span>
+          </td>
+          <td>
+            <div class="action-buttons">
+              <button pButton type="button" icon="pi pi-eye" 
+                      class="p-button-rounded p-button-info p-button-sm"
+                      (click)="viewDetails(item)"
+                      pTooltip="View Details"
+                      tooltipPosition="top"></button>
+              <button pButton type="button" icon="pi pi-trash" 
+                      class="p-button-rounded p-button-danger p-button-sm"
+                      (click)="deleteEquipment(item)"
+                      pTooltip="Delete"
+                      tooltipPosition="top"></button>
+            </div>
+          </td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="6" class="text-center">
+            No equipment found. Try adjusting your filters or add new equipment.
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
+
+<p-confirmDialog></p-confirmDialog>

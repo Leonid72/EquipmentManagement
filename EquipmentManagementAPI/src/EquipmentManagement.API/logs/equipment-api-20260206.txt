@@ -1,0 +1,542 @@
+2026-02-06 07:43:05.878 +02:00 [INF] GET api/equipment/search - Searching equipment
+2026-02-06 07:43:06.270 +02:00 [INF] Searching equipment with criteria: null
+2026-02-06 07:43:10.196 +02:00 [ERR] Error occurred while searching equipment
+System.InvalidOperationException: The LINQ expression 'DbSet<Equipment>()
+    .Where(e => True && False || e.CategoryID == __searchDto_CategoryID_Value_0 && True && True && False || e.Status.ToString() == __searchDto_Status_1)' could not be translated. Additional information: Translation of method 'object.ToString' failed. If this method can be mapped to your custom function, see https://go.microsoft.com/fwlink/?linkid=2132413 for more information. Either rewrite the query in a form that can be translated, or switch to client evaluation explicitly by inserting a call to 'AsEnumerable', 'AsAsyncEnumerable', 'ToList', or 'ToListAsync'. See https://go.microsoft.com/fwlink/?linkid=2101038 for more information.
+   at Microsoft.EntityFrameworkCore.Query.QueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.RelationalQueryableMethodTranslatingExpressionVisitor.Translate(Expression expression)
+   at Microsoft.EntityFrameworkCore.Query.QueryCompilationContext.CreateQueryExecutor[TResult](Expression query)
+   at Microsoft.EntityFrameworkCore.Storage.Database.CompileQuery[TResult](Expression query, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.CompileQueryCore[TResult](IDatabase database, Expression query, IModel model, Boolean async)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.<>c__DisplayClass12_0`1.<ExecuteAsync>b__0()
+   at Microsoft.EntityFrameworkCore.Query.Internal.CompiledQueryCache.GetOrAddQuery[TResult](Object cacheKey, Func`1 compiler)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryable`1.GetAsyncEnumerator(CancellationToken cancellationToken)
+   at System.Runtime.CompilerServices.ConfiguredCancelableAsyncEnumerable`1.GetAsyncEnumerator()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at EquipmentManagement.Infrastructure.Repositories.GenericRepository`1.FindAsync(Expression`1 predicate) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Infrastructure\Repositories\GenericRepository.cs:line 31
+   at EquipmentManagement.Application.Services.EquipmentService.SearchEquipmentAsync(EquipmentSearchDto searchDto) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.Application\Services\EquipmentService.cs:line 108
+2026-02-06 14:09:14.499 +02:00 [INF] Database initialized successfully
+2026-02-06 14:09:14.601 +02:00 [INF] Starting Equipment Management API
+2026-02-06 14:09:15.265 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 14:09:15.270 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 14:09:15.878 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 14:09:15.896 +02:00 [INF] Hosting environment: Development
+2026-02-06 14:09:15.898 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 14:10:32.081 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:10:32.104 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:10:35.972 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:10:36.099 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:10:36.107 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:10:36.407 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:10:51.046 +02:00 [INF] GET api/equipment/7 - Fetching equipment by ID
+2026-02-06 14:10:51.058 +02:00 [INF] Fetching equipment with ID: 7
+2026-02-06 14:10:51.231 +02:00 [INF] Successfully fetched equipment with ID: 7
+2026-02-06 14:11:06.522 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:11:06.551 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:11:06.622 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:11:06.642 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:11:06.644 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:11:06.667 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:12:30.191 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:12:30.197 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:12:30.370 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 14:12:50.971 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:12:50.991 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:12:51.029 +02:00 [INF] Successfully fetched 2 equipment items out of 2
+2026-02-06 14:15:25.729 +02:00 [INF] GET api/equipment/10 - Fetching equipment by ID
+2026-02-06 14:15:27.174 +02:00 [INF] Fetching equipment with ID: 10
+2026-02-06 14:15:27.231 +02:00 [INF] Successfully fetched equipment with ID: 10
+2026-02-06 14:15:39.168 +02:00 [INF] PUT api/equipment/10 - Updating equipment
+2026-02-06 14:15:39.205 +02:00 [INF] Updating equipment with ID: 10
+2026-02-06 14:15:40.493 +02:00 [INF] Successfully updated equipment with ID: 10
+2026-02-06 14:15:40.743 +02:00 [INF] GET api/equipment/10 - Fetching equipment by ID
+2026-02-06 14:15:43.011 +02:00 [INF] Fetching equipment with ID: 10
+2026-02-06 14:15:43.633 +02:00 [INF] Successfully fetched equipment with ID: 10
+2026-02-06 14:15:48.258 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:15:48.267 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:15:48.319 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:15:48.331 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:15:48.332 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:15:48.347 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:15:53.467 +02:00 [INF] GET api/equipment/7 - Fetching equipment by ID
+2026-02-06 14:15:53.470 +02:00 [INF] Fetching equipment with ID: 7
+2026-02-06 14:15:53.483 +02:00 [INF] Successfully fetched equipment with ID: 7
+2026-02-06 14:16:01.387 +02:00 [INF] PUT api/equipment/7 - Updating equipment
+2026-02-06 14:16:01.389 +02:00 [INF] Updating equipment with ID: 7
+2026-02-06 14:16:01.418 +02:00 [INF] Successfully updated equipment with ID: 7
+2026-02-06 14:16:01.427 +02:00 [INF] GET api/equipment/7 - Fetching equipment by ID
+2026-02-06 14:16:01.429 +02:00 [INF] Fetching equipment with ID: 7
+2026-02-06 14:16:01.437 +02:00 [INF] Successfully fetched equipment with ID: 7
+2026-02-06 14:16:04.927 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:16:04.977 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:16:05.027 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:16:05.040 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:16:05.042 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:16:05.070 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:16:18.094 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:16:18.105 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:16:18.126 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:16:35.077 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:16:35.079 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:16:35.125 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:16:52.014 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:16:52.018 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:16:52.039 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:16:52.045 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:16:52.047 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:16:52.055 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:20:29.410 +02:00 [INF] Database initialized successfully
+2026-02-06 14:20:29.550 +02:00 [INF] Starting Equipment Management API
+2026-02-06 14:20:30.137 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 14:20:30.156 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 14:20:30.684 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 14:20:30.686 +02:00 [INF] Hosting environment: Development
+2026-02-06 14:20:30.688 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 14:21:13.035 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:21:13.082 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:21:13.931 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:21:14.209 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:21:14.211 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:21:14.254 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:21:22.081 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:21:22.109 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:21:22.543 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:21:22.554 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:21:22.557 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:21:22.574 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:25:42.314 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:25:42.938 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:25:43.201 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:25:43.213 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:25:43.221 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:25:43.332 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:39:23.414 +02:00 [INF] Database initialized successfully
+2026-02-06 14:39:23.562 +02:00 [INF] Starting Equipment Management API
+2026-02-06 14:39:24.162 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 14:39:24.591 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 14:39:25.829 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 14:39:26.616 +02:00 [INF] Hosting environment: Development
+2026-02-06 14:39:26.625 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 14:43:00.209 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:43:00.228 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:43:01.316 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:43:01.350 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:43:01.360 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:43:01.449 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:43:06.346 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:43:06.348 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:43:06.536 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 14:43:12.592 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:43:12.594 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:43:12.673 +02:00 [INF] Successfully fetched 3 equipment items out of 3
+2026-02-06 14:43:29.014 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:43:29.016 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:43:29.060 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:44:01.195 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:44:01.230 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:44:01.288 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:44:01.302 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:44:01.306 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:44:01.339 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:44:34.851 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:44:34.860 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:44:35.055 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 14:44:42.118 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:44:42.220 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:44:42.244 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:46:06.482 +02:00 [INF] GET api/equipment/10 - Fetching equipment by ID
+2026-02-06 14:46:06.487 +02:00 [INF] Fetching equipment with ID: 10
+2026-02-06 14:46:06.540 +02:00 [INF] Successfully fetched equipment with ID: 10
+2026-02-06 14:46:13.152 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:46:13.164 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:46:13.190 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:46:13.196 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:46:13.198 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:46:13.210 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 14:46:26.580 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:46:26.582 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:46:26.656 +02:00 [INF] Successfully fetched 2 equipment items out of 2
+2026-02-06 14:46:35.899 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:46:35.902 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:46:35.925 +02:00 [INF] Successfully fetched 2 equipment items out of 2
+2026-02-06 14:46:40.849 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:46:40.853 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:46:40.899 +02:00 [INF] Successfully fetched 3 equipment items out of 3
+2026-02-06 14:50:44.334 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 14:50:44.345 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 14:50:44.379 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:06:50.810 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:06:50.823 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:06:54.494 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:06:54.509 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:06:54.757 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:06:54.779 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:06:54.782 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:06:54.782 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:06:54.801 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:09:16.174 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:09:16.213 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:09:16.337 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:09:16.377 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:09:16.385 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:09:16.435 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:10:03.455 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:10:03.460 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:10:03.482 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:10:13.659 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:10:13.665 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:10:14.432 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:10:14.440 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:10:14.442 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:10:14.452 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:14:10.704 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:14:10.738 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:14:10.774 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:14:10.911 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:14:10.928 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:14:10.954 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:14:45.752 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:14:45.767 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:14:46.402 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:14:46.455 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:14:46.515 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:14:46.690 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:14:49.222 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:14:49.282 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:14:49.308 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:14:49.317 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:14:49.318 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:14:49.330 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:15:20.281 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:15:20.305 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:15:20.357 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:15:20.386 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:15:20.388 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:15:20.406 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:16:17.448 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:16:17.450 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:16:17.494 +02:00 [INF] Successfully fetched 2 equipment items out of 2
+2026-02-06 15:17:37.450 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:17:37.457 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:17:37.513 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:17:37.544 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:17:37.560 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:17:37.588 +02:00 [INF] Successfully fetched 10 equipment items out of 10
+2026-02-06 15:28:18.059 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:18.078 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:28:18.210 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:18.265 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:18.279 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:28:18.304 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:21.617 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:21.632 +02:00 [INF] Fetching equipment with pagination. Page: 2, Size: 10
+2026-02-06 15:28:21.798 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:27.757 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:27.768 +02:00 [INF] Fetching equipment with pagination. Page: 3, Size: 10
+2026-02-06 15:28:27.800 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:51.086 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:51.093 +02:00 [INF] Fetching equipment with pagination. Page: 2, Size: 10
+2026-02-06 15:28:51.118 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:53.358 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:53.368 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:28:53.384 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:55.433 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:55.512 +02:00 [INF] Fetching equipment with pagination. Page: 2, Size: 10
+2026-02-06 15:28:55.563 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:57.349 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:57.351 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 15:28:57.382 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:28:59.015 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:28:59.018 +02:00 [INF] Fetching equipment with pagination. Page: 3, Size: 10
+2026-02-06 15:28:59.068 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 15:29:33.714 +02:00 [INF] DELETE api/equipment/19 - Deleting equipment
+2026-02-06 15:29:33.722 +02:00 [INF] Deleting equipment with ID: 19
+2026-02-06 15:29:34.118 +02:00 [INF] Successfully deleted equipment with ID: 19
+2026-02-06 15:29:34.151 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 15:29:34.153 +02:00 [INF] Fetching equipment with pagination. Page: 3, Size: 10
+2026-02-06 15:29:34.178 +02:00 [INF] Successfully fetched 9 equipment items out of 29
+2026-02-06 18:38:09.638 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:38:09.922 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:38:14.951 +02:00 [INF] Successfully fetched 10 equipment items out of 29
+2026-02-06 18:38:15.751 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:38:16.805 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:38:16.861 +02:00 [INF] Successfully fetched 10 equipment items out of 29
+2026-02-06 18:52:08.123 +02:00 [INF] Database initialized successfully
+2026-02-06 18:52:08.270 +02:00 [INF] Starting Equipment Management API
+2026-02-06 18:52:08.890 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 18:52:08.894 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 18:52:10.970 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 18:52:11.119 +02:00 [INF] Hosting environment: Development
+2026-02-06 18:52:11.124 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 18:52:26.878 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:52:26.884 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:52:28.645 +02:00 [INF] Successfully fetched 10 equipment items out of 29
+2026-02-06 18:59:08.675 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:08.681 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:10.322 +02:00 [INF] Successfully fetched 10 equipment items out of 29
+2026-02-06 18:59:10.359 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:10.369 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:10.499 +02:00 [INF] Successfully fetched 10 equipment items out of 29
+2026-02-06 18:59:15.247 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:15.252 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:15.380 +02:00 [INF] Successfully fetched 7 equipment items out of 7
+2026-02-06 18:59:24.261 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:24.266 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:24.352 +02:00 [INF] Successfully fetched 7 equipment items out of 7
+2026-02-06 18:59:33.083 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:33.084 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:33.110 +02:00 [INF] Successfully fetched 0 equipment items out of 0
+2026-02-06 18:59:37.596 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:37.669 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:37.708 +02:00 [INF] Successfully fetched 0 equipment items out of 0
+2026-02-06 18:59:40.663 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:40.667 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:40.698 +02:00 [INF] Successfully fetched 2 equipment items out of 2
+2026-02-06 18:59:44.490 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:44.493 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:44.564 +02:00 [INF] Successfully fetched 0 equipment items out of 0
+2026-02-06 18:59:49.522 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:49.524 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:49.651 +02:00 [INF] Successfully fetched 3 equipment items out of 3
+2026-02-06 18:59:54.586 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:54.593 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:54.712 +02:00 [INF] Successfully fetched 3 equipment items out of 3
+2026-02-06 18:59:55.497 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:55.518 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:55.579 +02:00 [INF] Successfully fetched 3 equipment items out of 3
+2026-02-06 18:59:56.378 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 18:59:56.383 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 18:59:56.412 +02:00 [INF] Successfully fetched 3 equipment items out of 3
+2026-02-06 19:00:06.631 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:00:06.645 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:00:06.683 +02:00 [INF] Successfully fetched 0 equipment items out of 0
+2026-02-06 19:00:09.696 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:00:09.722 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:00:09.809 +02:00 [INF] Successfully fetched 4 equipment items out of 4
+2026-02-06 19:26:32.541 +02:00 [INF] Database initialized successfully
+2026-02-06 19:26:32.667 +02:00 [INF] Starting Equipment Management API
+2026-02-06 19:26:34.362 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 19:26:34.374 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 19:26:34.652 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 19:26:34.654 +02:00 [INF] Hosting environment: Development
+2026-02-06 19:26:34.656 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 19:26:57.841 +02:00 [ERR] An unhandled exception occurred: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ILocationService' while attempting to activate 'EquipmentManagement.API.Controllers.LocationsController'.
+System.InvalidOperationException: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ILocationService' while attempting to activate 'EquipmentManagement.API.Controllers.LocationsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EquipmentManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 22
+2026-02-06 19:27:05.396 +02:00 [ERR] An unhandled exception occurred: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ILocationService' while attempting to activate 'EquipmentManagement.API.Controllers.LocationsController'.
+System.InvalidOperationException: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ILocationService' while attempting to activate 'EquipmentManagement.API.Controllers.LocationsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EquipmentManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 22
+2026-02-06 19:27:18.129 +02:00 [ERR] An unhandled exception occurred: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ILocationService' while attempting to activate 'EquipmentManagement.API.Controllers.LocationsController'.
+System.InvalidOperationException: Unable to resolve service for type 'EquipmentManagement.Application.Interfaces.ILocationService' while attempting to activate 'EquipmentManagement.API.Controllers.LocationsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method13(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at EquipmentManagement.API.Middleware.GlobalExceptionHandlerMiddleware.InvokeAsync(HttpContext context) in D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API\Middleware\GlobalExceptionHandlerMiddleware.cs:line 22
+2026-02-06 19:28:39.157 +02:00 [INF] Database initialized successfully
+2026-02-06 19:28:39.266 +02:00 [INF] Starting Equipment Management API
+2026-02-06 19:28:39.762 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 19:28:39.768 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 19:28:39.966 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 19:28:40.270 +02:00 [INF] Hosting environment: Development
+2026-02-06 19:28:40.276 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 19:35:16.345 +02:00 [INF] POST api/equipment - Creating new equipment
+2026-02-06 19:35:16.352 +02:00 [INF] Creating new equipment: Test
+2026-02-06 19:35:17.432 +02:00 [INF] Successfully created equipment with ID: 33
+2026-02-06 19:35:17.877 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:35:18.153 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:35:18.293 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:35:18.321 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:35:18.377 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:35:18.423 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:35:54.565 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:35:54.631 +02:00 [INF] Fetching equipment with pagination. Page: 3, Size: 10
+2026-02-06 19:35:54.663 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:35:57.590 +02:00 [INF] GET api/equipment/33 - Fetching equipment by ID
+2026-02-06 19:35:57.678 +02:00 [INF] Fetching equipment with ID: 33
+2026-02-06 19:35:57.697 +02:00 [INF] Successfully fetched equipment with ID: 33
+2026-02-06 19:36:10.373 +02:00 [INF] PUT api/equipment/33 - Updating equipment
+2026-02-06 19:36:10.379 +02:00 [INF] Updating equipment with ID: 33
+2026-02-06 19:36:10.432 +02:00 [INF] Successfully updated equipment with ID: 33
+2026-02-06 19:36:10.470 +02:00 [INF] GET api/equipment/33 - Fetching equipment by ID
+2026-02-06 19:36:10.676 +02:00 [INF] Fetching equipment with ID: 33
+2026-02-06 19:36:10.728 +02:00 [INF] Successfully fetched equipment with ID: 33
+2026-02-06 19:36:15.888 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:36:15.894 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:36:15.975 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:36:15.986 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:36:15.989 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:36:16.063 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:36:29.589 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:36:29.597 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:36:29.723 +02:00 [INF] Successfully fetched 7 equipment items out of 7
+2026-02-06 19:36:45.930 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:36:45.941 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:36:46.123 +02:00 [INF] Successfully fetched 0 equipment items out of 0
+2026-02-06 19:39:38.777 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:39:38.989 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:39:39.148 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:39:39.244 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:39:39.248 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:39:39.397 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:39:41.374 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:39:41.389 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:39:41.793 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:39:43.674 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:39:43.681 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:39:43.893 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:39:45.694 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:39:45.696 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 5
+2026-02-06 19:39:45.775 +02:00 [INF] Successfully fetched 5 equipment items out of 30
+2026-02-06 19:40:00.142 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:40:00.152 +02:00 [INF] Fetching equipment with pagination. Page: 2, Size: 5
+2026-02-06 19:40:00.200 +02:00 [INF] Successfully fetched 5 equipment items out of 30
+2026-02-06 19:40:07.689 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:40:07.690 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:40:07.705 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:40:19.407 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:40:19.410 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 25
+2026-02-06 19:40:19.427 +02:00 [INF] Successfully fetched 25 equipment items out of 30
+2026-02-06 19:40:24.493 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:40:24.495 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:40:24.507 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:40:44.069 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:40:44.073 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:40:44.176 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 19:40:46.685 +02:00 [INF] GET api/equipment/33 - Fetching equipment by ID
+2026-02-06 19:40:46.715 +02:00 [INF] Fetching equipment with ID: 33
+2026-02-06 19:40:46.727 +02:00 [INF] Successfully fetched equipment with ID: 33
+2026-02-06 19:41:00.932 +02:00 [INF] PUT api/equipment/33 - Updating equipment
+2026-02-06 19:41:00.938 +02:00 [INF] Updating equipment with ID: 33
+2026-02-06 19:41:00.965 +02:00 [INF] Successfully updated equipment with ID: 33
+2026-02-06 19:41:00.981 +02:00 [INF] GET api/equipment/33 - Fetching equipment by ID
+2026-02-06 19:41:00.987 +02:00 [INF] Fetching equipment with ID: 33
+2026-02-06 19:41:01.000 +02:00 [INF] Successfully fetched equipment with ID: 33
+2026-02-06 19:41:04.498 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:41:04.579 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:41:04.631 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:41:04.676 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:41:04.758 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:41:04.782 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:41:13.662 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:41:13.723 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:41:13.781 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 19:41:28.598 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:41:28.600 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:41:28.626 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:41:40.421 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:41:40.426 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 25
+2026-02-06 19:41:40.451 +02:00 [INF] Successfully fetched 25 equipment items out of 30
+2026-02-06 19:41:44.973 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:41:44.975 +02:00 [INF] Fetching equipment with pagination. Page: 2, Size: 25
+2026-02-06 19:41:44.998 +02:00 [INF] Successfully fetched 5 equipment items out of 30
+2026-02-06 19:41:46.776 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:41:46.778 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 25
+2026-02-06 19:41:46.799 +02:00 [INF] Successfully fetched 25 equipment items out of 30
+2026-02-06 19:42:34.992 +02:00 [INF] Database initialized successfully
+2026-02-06 19:42:35.089 +02:00 [INF] Starting Equipment Management API
+2026-02-06 19:42:35.816 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 19:42:35.822 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 19:42:36.248 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 19:42:36.308 +02:00 [INF] Hosting environment: Development
+2026-02-06 19:42:36.310 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 19:45:51.996 +02:00 [INF] Database initialized successfully
+2026-02-06 19:45:52.066 +02:00 [INF] Starting Equipment Management API
+2026-02-06 19:45:52.295 +02:00 [INF] Now listening on: https://localhost:50556
+2026-02-06 19:45:52.298 +02:00 [INF] Now listening on: http://localhost:50557
+2026-02-06 19:45:52.385 +02:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-02-06 19:45:52.387 +02:00 [INF] Hosting environment: Development
+2026-02-06 19:45:52.389 +02:00 [INF] Content root path: D:\Projects\EquipmentManagement\EquipmentManagementAPI\src\EquipmentManagement.API
+2026-02-06 19:45:59.953 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:46:00.329 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:46:01.425 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:46:01.454 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:46:01.461 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:46:01.578 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:46:50.850 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:46:50.857 +02:00 [INF] Fetching equipment with pagination. Page: 2, Size: 10
+2026-02-06 19:46:50.923 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:46:52.024 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:46:52.026 +02:00 [INF] Fetching equipment with pagination. Page: 3, Size: 10
+2026-02-06 19:46:52.046 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:46:59.224 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:46:59.242 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:46:59.406 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 19:47:01.940 +02:00 [INF] GET api/equipment/33 - Fetching equipment by ID
+2026-02-06 19:47:02.006 +02:00 [INF] Fetching equipment with ID: 33
+2026-02-06 19:47:02.057 +02:00 [INF] Successfully fetched equipment with ID: 33
+2026-02-06 19:47:13.788 +02:00 [INF] PUT api/equipment/33 - Updating equipment
+2026-02-06 19:47:13.797 +02:00 [INF] Updating equipment with ID: 33
+2026-02-06 19:47:14.205 +02:00 [INF] Successfully updated equipment with ID: 33
+2026-02-06 19:47:14.248 +02:00 [INF] GET api/equipment/33 - Fetching equipment by ID
+2026-02-06 19:47:14.306 +02:00 [INF] Fetching equipment with ID: 33
+2026-02-06 19:47:14.312 +02:00 [INF] Successfully fetched equipment with ID: 33
+2026-02-06 19:47:17.226 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:47:17.265 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:47:17.343 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:47:17.392 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:47:17.394 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:47:17.406 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:47:20.928 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:47:20.932 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:47:20.995 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 19:47:26.029 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:47:26.035 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:47:26.078 +02:00 [INF] Successfully fetched 10 equipment items out of 30
+2026-02-06 19:47:32.694 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:47:32.696 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:47:32.823 +02:00 [INF] Successfully fetched 7 equipment items out of 7
+2026-02-06 19:47:36.998 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:47:37.004 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 5
+2026-02-06 19:47:37.059 +02:00 [INF] Successfully fetched 5 equipment items out of 7
+2026-02-06 19:47:39.388 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:47:39.390 +02:00 [INF] Fetching equipment with pagination. Page: 2, Size: 5
+2026-02-06 19:47:39.461 +02:00 [INF] Successfully fetched 2 equipment items out of 7
+2026-02-06 19:48:19.956 +02:00 [INF] POST api/equipment - Creating new equipment
+2026-02-06 19:48:19.962 +02:00 [INF] Creating new equipment: Test33
+2026-02-06 19:48:20.262 +02:00 [INF] Successfully created equipment with ID: 34
+2026-02-06 19:48:20.368 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:48:20.370 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:48:20.404 +02:00 [INF] Successfully fetched 10 equipment items out of 31
+2026-02-06 19:48:20.413 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:48:20.431 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:48:20.495 +02:00 [INF] Successfully fetched 10 equipment items out of 31
+2026-02-06 19:48:26.326 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:48:26.334 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:48:26.430 +02:00 [INF] Successfully fetched 2 equipment items out of 2
+2026-02-06 19:48:32.781 +02:00 [INF] DELETE api/equipment/34 - Deleting equipment
+2026-02-06 19:48:32.805 +02:00 [INF] Deleting equipment with ID: 34
+2026-02-06 19:48:32.862 +02:00 [INF] Successfully deleted equipment with ID: 34
+2026-02-06 19:48:32.890 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:48:32.892 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:48:32.948 +02:00 [INF] Successfully fetched 1 equipment items out of 1
+2026-02-06 19:48:48.803 +02:00 [INF] GET api/equipment - Fetching equipment with filters
+2026-02-06 19:48:48.809 +02:00 [INF] Fetching equipment with pagination. Page: 1, Size: 10
+2026-02-06 19:48:48.895 +02:00 [INF] Successfully fetched 10 equipment items out of 30

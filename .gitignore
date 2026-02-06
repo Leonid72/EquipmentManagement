@@ -1,0 +1,29 @@
+## --- IDE & OS ---
+.vs/
+**/ .vs/
+.vscode/
+**/ .vscode/
+*.user
+*.userosscache
+*.sln.docstates
+.DS_Store
+
+## --- .NET (GaiaAPI) ---
+**/bin/
+**/obj/
+**/publish/
+**/TestResults/
+# Игнорируем базу данных, если она локальная
+*.db
+*.sqlite
+
+## --- Angular (GaiaClient) ---
+**/node_modules/
+**/dist/
+**/.angular/
+**/tmp/
+**/out-tsc/
+**/.sass-cache/
+npm-debug.log
+yarn-error.log
+

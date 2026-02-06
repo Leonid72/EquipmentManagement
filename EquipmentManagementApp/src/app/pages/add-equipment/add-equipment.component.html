@@ -1,0 +1,163 @@
+<div class="add-equipment-container">
+  <div class="header">
+    <button pButton type="button" icon="pi pi-arrow-left" 
+            class="p-button-text" 
+            (click)="goBack()"
+            label="Back to List"></button>
+    <h1>Add New Equipment</h1>
+  </div>
+
+  <p-card class="equipment-form-card">
+    <ng-template pTemplate="header">
+      <div class="card-header">
+        <h2>Equipment Information</h2>
+      </div>
+    </ng-template>
+
+    <form [formGroup]="equipmentForm" (ngSubmit)="onSubmit()">
+      <div class="p-fluid">
+        <div class="grid">
+          <div class="field col-12 md:col-6">
+            <label for="equipmentName">Equipment Name *</label>
+            <input pInputText id="equipmentName" 
+                   formControlName="equipmentName"
+                   placeholder="Enter equipment name"
+                   [class.ng-invalid]="isFieldInvalid('equipmentName')"
+                   [class.ng-dirty]="isFieldInvalid('equipmentName')">
+            <small class="p-error" *ngIf="isFieldInvalid('equipmentName')">
+              {{ getFieldError('equipmentName') }}
+            </small>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label for="serialNumber">Serial Number *</label>
+            <input pInputText id="serialNumber" 
+                   formControlName="serialNumber"
+                   placeholder="Enter serial number"
+                   [class.ng-invalid]="isFieldInvalid('serialNumber')"
+                   [class.ng-dirty]="isFieldInvalid('serialNumber')">
+            <small class="p-error" *ngIf="isFieldInvalid('serialNumber')">
+              {{ getFieldError('serialNumber') }}
+            </small>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label for="category">Category *</label>
+            <p-dropdown id="category" 
+                        formControlName="categoryID"
+                        [options]="categories" 
+                        optionLabel="categoryName" 
+                        optionValue="categoryID"
+                        placeholder="Select a Category"
+                        [filter]="true"
+                        filterBy="categoryName"
+                        [class.ng-invalid]="isFieldInvalid('categoryID')"
+                        [class.ng-dirty]="isFieldInvalid('categoryID')">
+              <ng-template let-category pTemplate="item">
+                <div class="dropdown-item">
+                  <div>{{ category.categoryName }}</div>
+                  <small *ngIf="category.description" class="text-muted">{{ category.description }}</small>
+                </div>
+              </ng-template>
+            </p-dropdown>
+            <small class="p-error" *ngIf="isFieldInvalid('categoryID')">
+              {{ getFieldError('categoryID') }}
+            </small>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label for="location">Location *</label>
+            <p-dropdown id="location" 
+                        formControlName="locationID"
+                        [options]="locations" 
+                        optionLabel="locationName" 
+                        optionValue="locationID"
+                        placeholder="Select a Location"
+                        [filter]="true"
+                        filterBy="locationName,building"
+                        [class.ng-invalid]="isFieldInvalid('locationID')"
+                        [class.ng-dirty]="isFieldInvalid('locationID')">
+              <ng-template let-location pTemplate="item">
+                <div class="dropdown-item">
+                  <div>{{ location.locationName }}</div>
+                  <small class="text-muted">{{ location.building }}, Floor {{ location.floor }}</small>
+                </div>
+              </ng-template>
+            </p-dropdown>
+            <small class="p-error" *ngIf="isFieldInvalid('locationID')">
+              {{ getFieldError('locationID') }}
+            </small>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label for="purchaseDate">Purchase Date *</label>
+            <p-calendar id="purchaseDate" 
+                        formControlName="purchaseDate"
+                        [showIcon]="true"
+                        dateFormat="yy-mm-dd"
+                        [maxDate]="maxDate"
+                        placeholder="Select Purchase Date"
+                        [class.ng-invalid]="isFieldInvalid('purchaseDate')"
+                        [class.ng-dirty]="isFieldInvalid('purchaseDate')">
+            </p-calendar>
+            <small class="p-error" *ngIf="isFieldInvalid('purchaseDate')">
+              {{ getFieldError('purchaseDate') }}
+            </small>
+            <small class="help-text">Purchase date cannot be in the future</small>
+          </div>
+
+          <div class="field col-12 md:col-6">
+            <label for="status">Status *</label>
+            <p-dropdown id="status" 
+                        formControlName="status"
+                        [options]="statuses" 
+                        placeholder="Select Status"
+                        [class.ng-invalid]="isFieldInvalid('status')"
+                        [class.ng-dirty]="isFieldInvalid('status')">
+              <ng-template let-status pTemplate="item">
+                <span [class]="'status-preview status-' + status.toLowerCase()">
+                  {{ status }}
+                </span>
+              </ng-template>
+            </p-dropdown>
+            <small class="p-error" *ngIf="isFieldInvalid('status')">
+              {{ getFieldError('status') }}
+            </small>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <button pButton type="button" label="Reset" 
+                (click)="onReset()" 
+                icon="pi pi-refresh"
+                class="p-button-secondary p-button-outlined"></button>
+        <button pButton type="button" label="Cancel" 
+                (click)="goBack()" 
+                class="p-button-secondary"></button>
+        <button pButton type="submit" label="Add Equipment" 
+                icon="pi pi-check"
+                [loading]="loading"
+                class="p-button-success"></button>
+      </div>
+    </form>
+  </p-card>
+
+  <div class="info-panel">
+    <p-card>
+      <ng-template pTemplate="header">
+        <div class="info-header">
+          <i class="pi pi-info-circle"></i>
+          <h3>Important Information</h3>
+        </div>
+      </ng-template>
+      <ul>
+        <li>All fields marked with * are required</li>
+        <li>Equipment name must be between 3 and 200 characters</li>
+        <li>Serial number must be between 5 and 100 characters</li>
+        <li>Purchase date cannot be in the future</li>
+        <li>Make sure to select the correct category and location</li>
+      </ul>
+    </p-card>
+  </div>
+</div>
