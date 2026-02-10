@@ -104,6 +104,7 @@ using (var scope = app.Services.CreateScope())
 // Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
+    //app.UseHttpsRedirection();
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
@@ -115,7 +116,7 @@ if (app.Environment.IsDevelopment())
 // Use global exception handler
 app.UseGlobalExceptionHandler();
 
-app.UseHttpsRedirection();
+
 
 app.UseCors("AllowAll");
 
