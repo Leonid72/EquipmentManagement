@@ -135,8 +135,8 @@ https://localhost:5001
 ### Option 1 – EF Core Migrations
 
 ```bash
-dotnet ef migrations add InitialCreate
-dotnet ef database update
+Add-Migration InitialCreate
+Update-Database
 ```
 
 ### Option 2 – SQL Script
